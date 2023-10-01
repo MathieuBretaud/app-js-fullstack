@@ -11,6 +11,8 @@ const NewPost = ({ userId }) => {
       message,
       author: userId,
     });
+
+    setMessage("");
   };
 
   return (
@@ -18,6 +20,7 @@ const NewPost = ({ userId }) => {
       <textarea
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Quoi de neuf"
+        value={message}
       ></textarea>
       <input type="submit" value="Envoyer" />
     </form>
